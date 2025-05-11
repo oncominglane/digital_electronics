@@ -1,0 +1,441 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2003 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 10.1.03
+//  \   \         Application : ISE
+//  /   /         Filename : genertor.ant
+// /___/   /\     Timestamp : Wed May 07 19:35:43 2025
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: genertor
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module genertor;
+    reg BUT = 1'b0;
+    reg CE = 1'b0;
+    reg CLK = 1'b0;
+    reg CLR = 1'b0;
+    reg D0 = 1'b0;
+    reg D1 = 1'b0;
+    reg D2 = 1'b0;
+    reg D3 = 1'b0;
+    reg D4 = 1'b0;
+    reg D5 = 1'b0;
+    reg D6 = 1'b0;
+    reg D7 = 1'b0;
+    reg L = 1'b0;
+    reg LEFT = 1'b0;
+    reg MODE = 1'b0;
+    wire LED0;
+    wire LED1;
+    wire LED2;
+    wire LED3;
+    wire LED4;
+    wire LED5;
+    wire LED6;
+    wire LED7;
+    wire Q0;
+    wire Q1;
+    wire Q2;
+    wire Q3;
+    wire Q4;
+    wire Q5;
+    wire Q6;
+    wire Q7;
+
+    parameter PERIOD = 40;
+    parameter real DUTY_CYCLE = 0.5;
+    parameter OFFSET = 100;
+
+    initial    // Clock process for CLK
+    begin
+        #OFFSET;
+        forever
+        begin
+            CLK = 1'b0;
+            #(PERIOD-(PERIOD*DUTY_CYCLE)) CLK = 1'b1;
+            #(PERIOD*DUTY_CYCLE);
+        end
+    end
+
+    generator UUT (
+        .BUT(BUT),
+        .CE(CE),
+        .CLK(CLK),
+        .CLR(CLR),
+        .D0(D0),
+        .D1(D1),
+        .D2(D2),
+        .D3(D3),
+        .D4(D4),
+        .D5(D5),
+        .D6(D6),
+        .D7(D7),
+        .L(L),
+        .LEFT(LEFT),
+        .MODE(MODE),
+        .LED0(LED0),
+        .LED1(LED1),
+        .LED2(LED2),
+        .LED3(LED3),
+        .LED4(LED4),
+        .LED5(LED5),
+        .LED6(LED6),
+        .LED7(LED7),
+        .Q0(Q0),
+        .Q1(Q1),
+        .Q2(Q2),
+        .Q3(Q3),
+        .Q4(Q4),
+        .Q5(Q5),
+        .Q6(Q6),
+        .Q7(Q7));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin    // Annotation process for clock CLK
+        #0;
+        ANNOTATE_LED0;
+        ANNOTATE_LED1;
+        ANNOTATE_LED2;
+        ANNOTATE_LED3;
+        ANNOTATE_LED4;
+        ANNOTATE_LED5;
+        ANNOTATE_LED6;
+        ANNOTATE_LED7;
+        ANNOTATE_Q0;
+        ANNOTATE_Q1;
+        ANNOTATE_Q2;
+        ANNOTATE_Q3;
+        ANNOTATE_Q4;
+        ANNOTATE_Q5;
+        ANNOTATE_Q6;
+        ANNOTATE_Q7;
+        #OFFSET;
+        forever begin
+            #30;
+            ANNOTATE_LED0;
+            ANNOTATE_LED1;
+            ANNOTATE_LED2;
+            ANNOTATE_LED3;
+            ANNOTATE_LED4;
+            ANNOTATE_LED5;
+            ANNOTATE_LED6;
+            ANNOTATE_LED7;
+            ANNOTATE_Q0;
+            ANNOTATE_Q1;
+            ANNOTATE_Q2;
+            ANNOTATE_Q3;
+            ANNOTATE_Q4;
+            ANNOTATE_Q5;
+            ANNOTATE_Q6;
+            ANNOTATE_Q7;
+            #10;
+        end
+    end
+
+    initial begin  // Open the annotations file...
+        TX_FILE = $fopen("C:\\Students\\Makov\\Makov_5\\genertor.ano");
+        #10040 // Final time:  10040 ns
+        $display("Success! Annotation Simulation Complete.");
+        $fdisplay(TX_FILE, "Total[%d]", TX_ERROR);
+        $fclose(TX_FILE);
+        $finish;
+    end
+
+    initial begin
+        // -------------  Current Time:  100ns
+        #100;
+        L = 1'b1;
+        LEFT = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  110ns
+        #10;
+        D0 = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  150ns
+        #40;
+        CE = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  350ns
+        #200;
+        BUT = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  470ns
+        #120;
+        BUT = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  550ns
+        #80;
+        D0 = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  630ns
+        #80;
+        L = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  710ns
+        #80;
+        BUT = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  790ns
+        #80;
+        BUT = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  1070ns
+        #280;
+        BUT = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  1150ns
+        #80;
+        BUT = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  1510ns
+        #360;
+        BUT = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  1550ns
+        #40;
+        BUT = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  1990ns
+        #440;
+        MODE = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  2190ns
+        #200;
+        D0 = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  2230ns
+        #40;
+        L = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  2350ns
+        #120;
+        BUT = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  2630ns
+        #280;
+        BUT = 1'b0;
+        L = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  2750ns
+        #120;
+        D0 = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  3310ns
+        #560;
+        BUT = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  3470ns
+        #160;
+        BUT = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  3670ns
+        #200;
+        BUT = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  3790ns
+        #120;
+        BUT = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  4110ns
+        #320;
+        BUT = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  4350ns
+        #240;
+        BUT = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  4590ns
+        #240;
+        LEFT = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  4670ns
+        #80;
+        D0 = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  4790ns
+        #120;
+        L = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  5030ns
+        #240;
+        BUT = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  5190ns
+        #160;
+        BUT = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  5350ns
+        #160;
+        D0 = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  5430ns
+        #80;
+        L = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  5750ns
+        #320;
+        BUT = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  5910ns
+        #160;
+        BUT = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  6270ns
+        #360;
+        BUT = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  6670ns
+        #400;
+        BUT = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  7190ns
+        #520;
+        BUT = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  7910ns
+        #720;
+        BUT = 1'b0;
+        // -------------------------------------
+    end
+
+    task ANNOTATE_LED0;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,LED0,%b]", $time, LED0);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_LED1;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,LED1,%b]", $time, LED1);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_LED2;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,LED2,%b]", $time, LED2);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_LED3;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,LED3,%b]", $time, LED3);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_LED4;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,LED4,%b]", $time, LED4);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_LED5;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,LED5,%b]", $time, LED5);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_LED6;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,LED6,%b]", $time, LED6);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_LED7;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,LED7,%b]", $time, LED7);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_Q0;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,Q0,%b]", $time, Q0);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_Q1;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,Q1,%b]", $time, Q1);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_Q2;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,Q2,%b]", $time, Q2);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_Q3;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,Q3,%b]", $time, Q3);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_Q4;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,Q4,%b]", $time, Q4);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_Q5;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,Q5,%b]", $time, Q5);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_Q6;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,Q6,%b]", $time, Q6);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_Q7;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,Q7,%b]", $time, Q7);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+endmodule
+

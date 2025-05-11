@@ -1,0 +1,2 @@
+select figure at 1567 347 11 -branches -sn=1
+select all in 524 76 1564 344 -branches -enclosed -noattrwin -sn=1

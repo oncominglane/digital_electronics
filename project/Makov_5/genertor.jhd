@@ -1,0 +1,3 @@
+MODULE genertor
+SUBMODULE generator
+INSTANCE UUT

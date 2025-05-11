@@ -1,0 +1,198 @@
+--------------------------------------------------------------------------------
+Release 10.1.03 Trace  (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\10.1\ISE\bin\nt\unwrapped\trce.exe -ise
+C:/Students/Makov/Makov_5/Makov_5.ise -intstyle ise -v 3 -s 6 -xml generator
+generator.ncd -o generator.twr generator.pcf -ucf generator.ucf
+
+Design file:              generator.ncd
+Physical constraint file: generator.pcf
+Device,package,speed:     xc2s15,tq144,-6 (PRODUCTION 1.27 2008-01-09)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock BUT
+------------+------------+------------+------------------+--------+
+            |  Setup to  |  Hold to   |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+CE          |   -1.544(R)|    3.037(R)|XLXN_5            |   0.000|
+D0          |   -2.641(R)|    3.340(R)|XLXN_5            |   0.000|
+D1          |   -2.751(R)|    3.450(R)|XLXN_5            |   0.000|
+D2          |   -2.587(R)|    3.286(R)|XLXN_5            |   0.000|
+D3          |   -2.167(R)|    2.866(R)|XLXN_5            |   0.000|
+D4          |   -2.434(R)|    3.133(R)|XLXN_5            |   0.000|
+D5          |   -2.487(R)|    3.186(R)|XLXN_5            |   0.000|
+D6          |   -2.226(R)|    2.925(R)|XLXN_5            |   0.000|
+D7          |   -3.025(R)|    3.724(R)|XLXN_5            |   0.000|
+L           |   -1.255(R)|    3.457(R)|XLXN_5            |   0.000|
+LEFT        |   -2.509(R)|    3.790(R)|XLXN_5            |   0.000|
+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock CLK
+------------+------------+------------+------------------+--------+
+            |  Setup to  |  Hold to   |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+CE          |   -1.372(R)|    2.865(R)|XLXN_5            |   0.000|
+D0          |   -2.469(R)|    3.168(R)|XLXN_5            |   0.000|
+D1          |   -2.579(R)|    3.278(R)|XLXN_5            |   0.000|
+D2          |   -2.415(R)|    3.114(R)|XLXN_5            |   0.000|
+D3          |   -1.995(R)|    2.694(R)|XLXN_5            |   0.000|
+D4          |   -2.262(R)|    2.961(R)|XLXN_5            |   0.000|
+D5          |   -2.315(R)|    3.014(R)|XLXN_5            |   0.000|
+D6          |   -2.054(R)|    2.753(R)|XLXN_5            |   0.000|
+D7          |   -2.853(R)|    3.552(R)|XLXN_5            |   0.000|
+L           |   -1.083(R)|    3.285(R)|XLXN_5            |   0.000|
+LEFT        |   -2.337(R)|    3.618(R)|XLXN_5            |   0.000|
+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock MODE
+------------+------------+------------+------------------+--------+
+            |  Setup to  |  Hold to   |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+CE          |   -1.838(R)|    3.331(R)|XLXN_5            |   0.000|
+D0          |   -2.935(R)|    3.634(R)|XLXN_5            |   0.000|
+D1          |   -3.045(R)|    3.744(R)|XLXN_5            |   0.000|
+D2          |   -2.881(R)|    3.580(R)|XLXN_5            |   0.000|
+D3          |   -2.461(R)|    3.160(R)|XLXN_5            |   0.000|
+D4          |   -2.728(R)|    3.427(R)|XLXN_5            |   0.000|
+D5          |   -2.781(R)|    3.480(R)|XLXN_5            |   0.000|
+D6          |   -2.520(R)|    3.219(R)|XLXN_5            |   0.000|
+D7          |   -3.319(R)|    4.018(R)|XLXN_5            |   0.000|
+L           |   -1.549(R)|    3.751(R)|XLXN_5            |   0.000|
+LEFT        |   -2.803(R)|    4.084(R)|XLXN_5            |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock BUT to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+LED0        |   13.624(R)|XLXN_5            |   0.000|
+LED1        |   14.089(R)|XLXN_5            |   0.000|
+LED2        |   13.950(R)|XLXN_5            |   0.000|
+LED3        |   13.955(R)|XLXN_5            |   0.000|
+LED4        |   14.043(R)|XLXN_5            |   0.000|
+LED5        |   14.252(R)|XLXN_5            |   0.000|
+LED6        |   14.293(R)|XLXN_5            |   0.000|
+LED7        |   14.505(R)|XLXN_5            |   0.000|
+Q0          |   14.426(R)|XLXN_5            |   0.000|
+Q1          |   14.484(R)|XLXN_5            |   0.000|
+Q2          |   14.165(R)|XLXN_5            |   0.000|
+Q3          |   14.137(R)|XLXN_5            |   0.000|
+Q4          |   13.966(R)|XLXN_5            |   0.000|
+Q5          |   14.087(R)|XLXN_5            |   0.000|
+Q6          |   14.164(R)|XLXN_5            |   0.000|
+Q7          |   14.267(R)|XLXN_5            |   0.000|
+------------+------------+------------------+--------+
+
+Clock CLK to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+LED0        |   13.452(R)|XLXN_5            |   0.000|
+LED1        |   13.917(R)|XLXN_5            |   0.000|
+LED2        |   13.778(R)|XLXN_5            |   0.000|
+LED3        |   13.783(R)|XLXN_5            |   0.000|
+LED4        |   13.871(R)|XLXN_5            |   0.000|
+LED5        |   14.080(R)|XLXN_5            |   0.000|
+LED6        |   14.121(R)|XLXN_5            |   0.000|
+LED7        |   14.333(R)|XLXN_5            |   0.000|
+Q0          |   14.254(R)|XLXN_5            |   0.000|
+Q1          |   14.312(R)|XLXN_5            |   0.000|
+Q2          |   13.993(R)|XLXN_5            |   0.000|
+Q3          |   13.965(R)|XLXN_5            |   0.000|
+Q4          |   13.794(R)|XLXN_5            |   0.000|
+Q5          |   13.915(R)|XLXN_5            |   0.000|
+Q6          |   13.992(R)|XLXN_5            |   0.000|
+Q7          |   14.095(R)|XLXN_5            |   0.000|
+------------+------------+------------------+--------+
+
+Clock MODE to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+LED0        |   13.918(R)|XLXN_5            |   0.000|
+LED1        |   14.383(R)|XLXN_5            |   0.000|
+LED2        |   14.244(R)|XLXN_5            |   0.000|
+LED3        |   14.249(R)|XLXN_5            |   0.000|
+LED4        |   14.337(R)|XLXN_5            |   0.000|
+LED5        |   14.546(R)|XLXN_5            |   0.000|
+LED6        |   14.587(R)|XLXN_5            |   0.000|
+LED7        |   14.799(R)|XLXN_5            |   0.000|
+Q0          |   14.720(R)|XLXN_5            |   0.000|
+Q1          |   14.778(R)|XLXN_5            |   0.000|
+Q2          |   14.459(R)|XLXN_5            |   0.000|
+Q3          |   14.431(R)|XLXN_5            |   0.000|
+Q4          |   14.260(R)|XLXN_5            |   0.000|
+Q5          |   14.381(R)|XLXN_5            |   0.000|
+Q6          |   14.458(R)|XLXN_5            |   0.000|
+Q7          |   14.561(R)|XLXN_5            |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock BUT
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+BUT            |    5.137|         |         |         |
+CLK            |    5.137|         |         |         |
+MODE           |    5.137|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+BUT            |    5.137|         |         |         |
+CLK            |    5.137|         |         |         |
+MODE           |    5.137|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock MODE
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+BUT            |    5.137|         |         |         |
+CLK            |    5.137|         |         |         |
+MODE           |    5.137|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Wed May 07 20:02:20 2025 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 62 MB
+
+
+

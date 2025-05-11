@@ -1,0 +1,385 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 10.1.03
+//  \   \         Application : sch2verilog
+//  /   /         Filename : generator.vf
+// /___/   /\     Timestamp : 05/07/2025 19:45:39
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\10.1\ISE\bin\nt\unwrapped\sch2verilog.exe -intstyle ise -family spartan2 -w C:/Students/Makov/Makov_5/generator.sch generator.vf
+//Design Name: generator
+//Device: spartan2
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module M2_1_MXILINX_generator(D0, 
+                              D1, 
+                              S0, 
+                              O);
+
+    input D0;
+    input D1;
+    input S0;
+   output O;
+   
+   wire M0;
+   wire M1;
+   
+   AND2B1 I_36_7 (.I0(S0), 
+                  .I1(D0), 
+                  .O(M0));
+   OR2 I_36_8 (.I0(M1), 
+               .I1(M0), 
+               .O(O));
+   AND2 I_36_9 (.I0(D1), 
+                .I1(S0), 
+                .O(M1));
+endmodule
+`timescale 1ns / 1ps
+
+module SR8CLED_MXILINX_generator(C, 
+                                 CE, 
+                                 CLR, 
+                                 D, 
+                                 L, 
+                                 LEFT, 
+                                 SLI, 
+                                 SRI, 
+                                 Q);
+
+    input C;
+    input CE;
+    input CLR;
+    input [7:0] D;
+    input L;
+    input LEFT;
+    input SLI;
+    input SRI;
+   output [7:0] Q;
+   
+   wire L_LEFT;
+   wire L_OR_CE;
+   wire MDL0;
+   wire MDL1;
+   wire MDL2;
+   wire MDL3;
+   wire MDL4;
+   wire MDL5;
+   wire MDL6;
+   wire MDL7;
+   wire MDR0;
+   wire MDR1;
+   wire MDR2;
+   wire MDR3;
+   wire MDR4;
+   wire MDR5;
+   wire MDR6;
+   wire MDR7;
+   wire [7:0] Q_DUMMY;
+   
+   assign Q[7:0] = Q_DUMMY[7:0];
+   M2_1_MXILINX_generator I_MDL0 (.D0(SLI), 
+                                  .D1(D[0]), 
+                                  .S0(L), 
+                                  .O(MDL0));
+   // synthesis attribute HU_SET of I_MDL0 is "I_MDL0_2"
+   M2_1_MXILINX_generator I_MDL1 (.D0(Q_DUMMY[0]), 
+                                  .D1(D[1]), 
+                                  .S0(L), 
+                                  .O(MDL1));
+   // synthesis attribute HU_SET of I_MDL1 is "I_MDL1_1"
+   M2_1_MXILINX_generator I_MDL2 (.D0(Q_DUMMY[1]), 
+                                  .D1(D[2]), 
+                                  .S0(L), 
+                                  .O(MDL2));
+   // synthesis attribute HU_SET of I_MDL2 is "I_MDL2_0"
+   M2_1_MXILINX_generator I_MDL3 (.D0(Q_DUMMY[2]), 
+                                  .D1(D[3]), 
+                                  .S0(L), 
+                                  .O(MDL3));
+   // synthesis attribute HU_SET of I_MDL3 is "I_MDL3_6"
+   M2_1_MXILINX_generator I_MDL4 (.D0(Q_DUMMY[3]), 
+                                  .D1(D[4]), 
+                                  .S0(L), 
+                                  .O(MDL4));
+   // synthesis attribute HU_SET of I_MDL4 is "I_MDL4_12"
+   M2_1_MXILINX_generator I_MDL5 (.D0(Q_DUMMY[4]), 
+                                  .D1(D[5]), 
+                                  .S0(L), 
+                                  .O(MDL5));
+   // synthesis attribute HU_SET of I_MDL5 is "I_MDL5_13"
+   M2_1_MXILINX_generator I_MDL6 (.D0(Q_DUMMY[5]), 
+                                  .D1(D[6]), 
+                                  .S0(L), 
+                                  .O(MDL6));
+   // synthesis attribute HU_SET of I_MDL6 is "I_MDL6_14"
+   M2_1_MXILINX_generator I_MDL7 (.D0(Q_DUMMY[6]), 
+                                  .D1(D[7]), 
+                                  .S0(L), 
+                                  .O(MDL7));
+   // synthesis attribute HU_SET of I_MDL7 is "I_MDL7_9"
+   M2_1_MXILINX_generator I_MDR0 (.D0(Q_DUMMY[1]), 
+                                  .D1(MDL0), 
+                                  .S0(L_LEFT), 
+                                  .O(MDR0));
+   // synthesis attribute HU_SET of I_MDR0 is "I_MDR0_3"
+   M2_1_MXILINX_generator I_MDR1 (.D0(Q_DUMMY[2]), 
+                                  .D1(MDL1), 
+                                  .S0(L_LEFT), 
+                                  .O(MDR1));
+   // synthesis attribute HU_SET of I_MDR1 is "I_MDR1_4"
+   M2_1_MXILINX_generator I_MDR2 (.D0(Q_DUMMY[3]), 
+                                  .D1(MDL2), 
+                                  .S0(L_LEFT), 
+                                  .O(MDR2));
+   // synthesis attribute HU_SET of I_MDR2 is "I_MDR2_5"
+   M2_1_MXILINX_generator I_MDR3 (.D0(Q_DUMMY[4]), 
+                                  .D1(MDL3), 
+                                  .S0(L_LEFT), 
+                                  .O(MDR3));
+   // synthesis attribute HU_SET of I_MDR3 is "I_MDR3_7"
+   M2_1_MXILINX_generator I_MDR4 (.D0(Q_DUMMY[5]), 
+                                  .D1(MDL4), 
+                                  .S0(L_LEFT), 
+                                  .O(MDR4));
+   // synthesis attribute HU_SET of I_MDR4 is "I_MDR4_15"
+   M2_1_MXILINX_generator I_MDR5 (.D0(Q_DUMMY[6]), 
+                                  .D1(MDL5), 
+                                  .S0(L_LEFT), 
+                                  .O(MDR5));
+   // synthesis attribute HU_SET of I_MDR5 is "I_MDR5_11"
+   M2_1_MXILINX_generator I_MDR6 (.D0(Q_DUMMY[7]), 
+                                  .D1(MDL6), 
+                                  .S0(L_LEFT), 
+                                  .O(MDR6));
+   // synthesis attribute HU_SET of I_MDR6 is "I_MDR6_10"
+   M2_1_MXILINX_generator I_MDR7 (.D0(SRI), 
+                                  .D1(MDL7), 
+                                  .S0(L_LEFT), 
+                                  .O(MDR7));
+   // synthesis attribute HU_SET of I_MDR7 is "I_MDR7_8"
+   FDCE I_Q0 (.C(C), 
+              .CE(L_OR_CE), 
+              .CLR(CLR), 
+              .D(MDR0), 
+              .Q(Q_DUMMY[0]));
+   defparam I_Q0.INIT = 1'b0;
+   FDCE I_Q1 (.C(C), 
+              .CE(L_OR_CE), 
+              .CLR(CLR), 
+              .D(MDR1), 
+              .Q(Q_DUMMY[1]));
+   defparam I_Q1.INIT = 1'b0;
+   FDCE I_Q2 (.C(C), 
+              .CE(L_OR_CE), 
+              .CLR(CLR), 
+              .D(MDR2), 
+              .Q(Q_DUMMY[2]));
+   defparam I_Q2.INIT = 1'b0;
+   FDCE I_Q3 (.C(C), 
+              .CE(L_OR_CE), 
+              .CLR(CLR), 
+              .D(MDR3), 
+              .Q(Q_DUMMY[3]));
+   defparam I_Q3.INIT = 1'b0;
+   FDCE I_Q4 (.C(C), 
+              .CE(L_OR_CE), 
+              .CLR(CLR), 
+              .D(MDR4), 
+              .Q(Q_DUMMY[4]));
+   defparam I_Q4.INIT = 1'b0;
+   FDCE I_Q5 (.C(C), 
+              .CE(L_OR_CE), 
+              .CLR(CLR), 
+              .D(MDR5), 
+              .Q(Q_DUMMY[5]));
+   defparam I_Q5.INIT = 1'b0;
+   FDCE I_Q6 (.C(C), 
+              .CE(L_OR_CE), 
+              .CLR(CLR), 
+              .D(MDR6), 
+              .Q(Q_DUMMY[6]));
+   defparam I_Q6.INIT = 1'b0;
+   FDCE I_Q7 (.C(C), 
+              .CE(L_OR_CE), 
+              .CLR(CLR), 
+              .D(MDR7), 
+              .Q(Q_DUMMY[7]));
+   defparam I_Q7.INIT = 1'b0;
+   OR2 I_36_102 (.I0(L), 
+                 .I1(CE), 
+                 .O(L_OR_CE));
+   OR2 I_36_120 (.I0(LEFT), 
+                 .I1(L), 
+                 .O(L_LEFT));
+endmodule
+`timescale 1ns / 1ps
+
+module generator(BUT, 
+                 CE, 
+                 CLK, 
+                 CLR, 
+                 D0, 
+                 D1, 
+                 D2, 
+                 D3, 
+                 D4, 
+                 D5, 
+                 D6, 
+                 D7, 
+                 L, 
+                 LEFT, 
+                 MODE, 
+                 LED0, 
+                 LED1, 
+                 LED2, 
+                 LED3, 
+                 LED4, 
+                 LED5, 
+                 LED6, 
+                 LED7, 
+                 Q0, 
+                 Q1, 
+                 Q2, 
+                 Q3, 
+                 Q4, 
+                 Q5, 
+                 Q6, 
+                 Q7);
+
+    input BUT;
+    input CE;
+    input CLK;
+    input CLR;
+    input D0;
+    input D1;
+    input D2;
+    input D3;
+    input D4;
+    input D5;
+    input D6;
+    input D7;
+    input L;
+    input LEFT;
+    input MODE;
+   output LED0;
+   output LED1;
+   output LED2;
+   output LED3;
+   output LED4;
+   output LED5;
+   output LED6;
+   output LED7;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   output Q4;
+   output Q5;
+   output Q6;
+   output Q7;
+   
+   wire [7:0] D;
+   wire [7:0] Q;
+   wire XLXN_5;
+   wire XLXN_67;
+   wire XLXN_69;
+   wire XLXN_71;
+   wire XLXN_76;
+   wire XLXN_80;
+   wire XLXN_81;
+   wire XLXN_82;
+   wire XLXN_85;
+   wire XLXN_110;
+   
+   MUXF5 XLXI_8 (.I0(XLXN_80), 
+                 .I1(XLXN_81), 
+                 .S(XLXN_82), 
+                 .O(XLXN_5));
+   SR8CLED_MXILINX_generator XLXI_9 (.C(XLXN_5), 
+                                     .CE(XLXN_67), 
+                                     .CLR(XLXN_85), 
+                                     .D(D[7:0]), 
+                                     .L(XLXN_69), 
+                                     .LEFT(XLXN_110), 
+                                     .SLI(XLXN_76), 
+                                     .SRI(), 
+                                     .Q(Q[7:0]));
+   // synthesis attribute HU_SET of XLXI_9 is "XLXI_9_16"
+   OBUF XLXI_13 (.I(Q[7]), 
+                 .O(Q7));
+   OBUF XLXI_14 (.I(Q[6]), 
+                 .O(Q6));
+   OBUF XLXI_15 (.I(Q[5]), 
+                 .O(Q5));
+   OBUF XLXI_16 (.I(Q[4]), 
+                 .O(Q4));
+   OBUF XLXI_17 (.I(Q[3]), 
+                 .O(Q3));
+   OBUF XLXI_18 (.I(Q[2]), 
+                 .O(Q2));
+   OBUF XLXI_19 (.I(Q[1]), 
+                 .O(Q1));
+   OBUF XLXI_20 (.I(Q[0]), 
+                 .O(Q0));
+   OBUF XLXI_21 (.I(Q[7]), 
+                 .O(LED7));
+   OBUF XLXI_22 (.I(Q[6]), 
+                 .O(LED6));
+   OBUF XLXI_23 (.I(Q[5]), 
+                 .O(LED5));
+   OBUF XLXI_24 (.I(Q[4]), 
+                 .O(LED4));
+   OBUF XLXI_25 (.I(Q[3]), 
+                 .O(LED3));
+   OBUF XLXI_26 (.I(Q[2]), 
+                 .O(LED2));
+   OBUF XLXI_27 (.I(Q[1]), 
+                 .O(LED1));
+   OBUF XLXI_28 (.I(Q[0]), 
+                 .O(LED0));
+   IBUF XLXI_30 (.I(CE), 
+                 .O(XLXN_67));
+   IBUF XLXI_32 (.I(L), 
+                 .O(XLXN_69));
+   IBUF XLXI_34 (.I(D6), 
+                 .O(D[6]));
+   IBUF XLXI_35 (.I(D5), 
+                 .O(D[5]));
+   IBUF XLXI_36 (.I(D4), 
+                 .O(D[4]));
+   IBUF XLXI_37 (.I(D3), 
+                 .O(D[3]));
+   IBUF XLXI_38 (.I(D2), 
+                 .O(D[2]));
+   IBUF XLXI_39 (.I(D1), 
+                 .O(D[1]));
+   IBUF XLXI_40 (.I(D0), 
+                 .O(D[0]));
+   XOR2 XLXI_41 (.I0(Q[7]), 
+                 .I1(XLXN_71), 
+                 .O(XLXN_76));
+   OR2 XLXI_42 (.I0(Q[6]), 
+                .I1(Q[3]), 
+                .O(XLXN_71));
+   IBUF XLXI_43 (.I(MODE), 
+                 .O(XLXN_82));
+   IBUF XLXI_44 (.I(BUT), 
+                 .O(XLXN_81));
+   IBUFG XLXI_45 (.I(CLK), 
+                  .O(XLXN_80));
+   IBUF XLXI_46 (.I(CLR), 
+                 .O(XLXN_85));
+   IBUF XLXI_47 (.I(D7), 
+                 .O(D[7]));
+   IBUF XLXI_48 (.I(LEFT), 
+                 .O(XLXN_110));
+endmodule

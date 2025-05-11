@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator K.39
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o C:\Students\Makov\Makov_5\//Untitled -u 0 C:/Students/Makov/Makov_5/generator.bit -x xc18v256 
+
+PROM C:\Students\Makov\Makov_5\//Untitled.prm map: Wed May 07 20:07:04 2025
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          32K
+PROM start    0000:0000
+PROM end      0000:7fff
+PROM checksum 00314f5b
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0000:6087     May 07 20:05:00 2025 C:/Students/Makov/Makov_5/generator.bit

@@ -1,0 +1,72 @@
+Command line:
+   ./genertor_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  1118
+
+Wed May 07 19:35:59 2025
+
+Total Line Count : 464
+
+ Elaboration Time: 0.125 sec
+
+ Current Memory Usage: 252.752 Meg
+
+ Total Signals          : 493
+ Total Nets             : 164
+ Total Signal Drivers   : 175
+ Total Blocks           : 112
+ Total Primitive Blocks : 93
+ Total Processes        : 227
+ Total Traceable Variables  : 175
+ Total Scalar Nets and Variables : 5900
+ntrace select -o on -n /genertor/LED0 
+ntrace select -o on -n /genertor/LED1 
+ntrace select -o on -n /genertor/LED2 
+ntrace select -o on -n /genertor/LED3 
+ntrace select -o on -n /genertor/LED4 
+ntrace select -o on -n /genertor/LED5 
+ntrace select -o on -n /genertor/LED6 
+ntrace select -o on -n /genertor/LED7 
+ntrace select -o on -n /genertor/Q0 
+ntrace select -o on -n /genertor/Q1 
+ntrace select -o on -n /genertor/Q2 
+ntrace select -o on -n /genertor/Q3 
+ntrace select -o on -n /genertor/Q4 
+ntrace select -o on -n /genertor/Q5 
+ntrace select -o on -n /genertor/Q6 
+ntrace select -o on -n /genertor/Q7 
+ntrace select -o on -n /genertor/PERIOD 
+ntrace select -o on -n /genertor/DUTY_CYCLE 
+ntrace select -o on -n /genertor/OFFSET 
+ntrace select -o on -n /genertor/BUT 
+ntrace select -o on -n /genertor/CE 
+ntrace select -o on -n /genertor/CLK 
+ntrace select -o on -n /genertor/CLR 
+ntrace select -o on -n /genertor/D0 
+ntrace select -o on -n /genertor/D1 
+ntrace select -o on -n /genertor/D2 
+ntrace select -o on -n /genertor/D3 
+ntrace select -o on -n /genertor/D4 
+ntrace select -o on -n /genertor/D5 
+ntrace select -o on -n /genertor/D6 
+ntrace select -o on -n /genertor/D7 
+ntrace select -o on -n /genertor/L 
+ntrace select -o on -n /genertor/LEFT 
+ntrace select -o on -n /genertor/MODE 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+isimrun 10000 ns 
+restart
+isimrun 10000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+ Total Simulation Time: 0.65625 sec
+
+ Current Memory Usage: 258.441 Meg
+
+Wed May 07 19:47:04 2025
+

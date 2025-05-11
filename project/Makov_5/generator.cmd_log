@@ -1,0 +1,21 @@
+sch2verilog -intstyle ise -family spartan2   -w "C:/Students/gr206_makov/Makov_5/generator.sch" generator.vf
+sch2verilog -intstyle ise -family spartan2   -w "C:/Students/Makov/Makov_5/generator.sch" generator.vf
+xst -ise "C:/Students/Makov/Makov_5/Makov_5.ise" -intstyle ise -ifn "C:/Students/Makov/Makov_5/generator.xst" -ofn "C:/Students/Makov/Makov_5/generator.syr"
+ngdbuild -ise "C:/Students/Makov/Makov_5/Makov_5.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s15-tq144-6 "generator.ngc" generator.ngd
+xst -ise "C:/Students/Makov/Makov_5/Makov_5.ise" -intstyle ise -ifn "C:/Students/Makov/Makov_5/generator.xst" -ofn "C:/Students/Makov/Makov_5/generator.syr"
+xst -ise "C:/Students/Makov/Makov_5/Makov_5.ise" -intstyle ise -ifn "C:/Students/Makov/Makov_5/generator.xst" -ofn "C:/Students/Makov/Makov_5/generator.syr"
+ngdbuild -ise "C:/Students/Makov/Makov_5/Makov_5.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s15-tq144-6 "generator.ngc" generator.ngd
+map -ise "C:/Students/Makov/Makov_5/Makov_5.ise" -intstyle ise -p xc2s15-tq144-6 -cm area -pr off -k 4 -c 100 -tx off -o generator_map.ncd generator.ngd generator.pcf
+sch2verilog -intstyle ise -family spartan2   -w "C:/Students/Makov/Makov_5/generator.sch" generator.vf
+xst -ise "C:/Students/Makov/Makov_5/Makov_5.ise" -intstyle ise -ifn "C:/Students/Makov/Makov_5/generator.xst" -ofn "C:/Students/Makov/Makov_5/generator.syr"
+ngdbuild -ise "C:/Students/Makov/Makov_5/Makov_5.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s15-tq144-6 "generator.ngc" generator.ngd
+xst -ise "C:/Students/Makov/Makov_5/Makov_5.ise" -intstyle ise -ifn "C:/Students/Makov/Makov_5/generator.xst" -ofn "C:/Students/Makov/Makov_5/generator.syr"
+ngdbuild -ise "C:/Students/Makov/Makov_5/Makov_5.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s15-tq144-6 "generator.ngc" generator.ngd
+map -ise "C:/Students/Makov/Makov_5/Makov_5.ise" -intstyle ise -p xc2s15-tq144-6 -cm area -pr off -k 4 -c 100 -tx off -o generator_map.ncd generator.ngd generator.pcf
+map -ise "C:/Students/Makov/Makov_5/Makov_5.ise" -intstyle ise -p xc2s15-tq144-6 -cm area -pr off -k 4 -c 100 -tx off -o generator_map.ncd generator.ngd generator.pcf
+xst -ise "C:/Students/Makov/Makov_5/Makov_5.ise" -intstyle ise -ifn "C:/Students/Makov/Makov_5/generator.xst" -ofn "C:/Students/Makov/Makov_5/generator.syr"
+ngdbuild -ise "C:/Students/Makov/Makov_5/Makov_5.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s15-tq144-6 "generator.ngc" generator.ngd
+map -ise "C:/Students/Makov/Makov_5/Makov_5.ise" -intstyle ise -p xc2s15-tq144-6 -cm area -pr off -k 4 -c 100 -tx off -o generator_map.ncd generator.ngd generator.pcf
+par -ise "C:/Students/Makov/Makov_5/Makov_5.ise" -w -intstyle ise -ol std -t 1 generator_map.ncd generator.ncd generator.pcf
+trce -ise "C:/Students/Makov/Makov_5/Makov_5.ise" -intstyle ise -v 3 -s 6 -xml generator generator.ncd -o generator.twr generator.pcf -ucf generator.ucf
+bitgen -ise "C:/Students/Makov/Makov_5/Makov_5.ise" -intstyle ise -f generator.ut generator.ncd
